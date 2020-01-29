@@ -1,0 +1,10 @@
+<header>
+  <button (click)="callReddit()">Cuteness Button</button>
+</header>
+<main>
+  <div *ngFor="let post of redditPosts" class="postBox">
+    <h4 class="boxContents">{{ post.data.title }}</h4>
+    <img class="boxContents" src="{{post.data.thumbnail}}" height="auto" width="auto">
+    <a class="boxContents" href="{{post.data.url}}"><i class="fas fa-link"></i></a> 
+  </div>
+</main>
